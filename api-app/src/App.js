@@ -26,3 +26,7 @@ export default App;
 // It's entirely preference whether you export in the component creation line OR
 // at the bottom of the component file. 
 
+// constructor makes the variables declared in a class private to that class.
+
+// super() gives you access to the parent component's properties.
+
