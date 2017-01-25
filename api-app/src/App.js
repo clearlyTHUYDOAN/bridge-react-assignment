@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-// import axios from 'axios';
 import List from './components/list';
 import ListItem from './components/list-item.js';
 import './App.css';
@@ -15,15 +14,13 @@ class App extends Component {
   componentDidMount() {
     $.get('http://www.omdbapi.com/?s=harry+potter&y=&plot=short&r=json&type=movie')
     .then(response => {
-      console.log(response["Search"]);
-      // this.setState = {
-
-      // }
+      // console.log(response["Search"]);
+      let responseArray = response["Search"];
+      console.log(responseArray);
+      this.setState = {
+        searchedMovies: responseArray
+      }
     });
-    // axios.get('http://www.omdbapi.com/?t=harry+potter&y=&plot=short&r=json')
-    // .then(response => {
-    //   console.log(response.data);
-    // })
   }
 
   render() {
