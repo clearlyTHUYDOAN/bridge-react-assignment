@@ -16,3 +16,13 @@ class App extends Component {
 }
 
 export default App;
+
+// CONTAINERS: //
+// Containers are for smart components. Purvi used them to be linked 
+// in the route tree. The state management is in there and the logic. 
+// Think of them like entire pages with dumb components. 
+
+// EXPORTING: //
+// It's entirely preference whether you export in the component creation line OR
+// at the bottom of the component file. 
+
