@@ -1,15 +1,36 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-// import List from './components/list';
-// import ListItem from './components/list-itsem.js';
+// import axios from 'axios';
+import List from './components/list';
+import ListItem from './components/list-item.js';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+      this.state = {
+        searchedMovies: []
+      }
+  }
+  componentDidMount() {
+    $.get('http://www.omdbapi.com/?s=harry+potter&y=&plot=short&r=json&type=movie')
+    .then(response => {
+      console.log(response["Search"]);
+      // this.setState = {
+
+      // }
+    });
+    // axios.get('http://www.omdbapi.com/?t=harry+potter&y=&plot=short&r=json')
+    // .then(response => {
+    //   console.log(response.data);
+    // })
+  }
+
   render() {
     return (
       <div className="App">
-        <h2>The App component is working.</h2>
-
+        <List />
+        <ListItem />
       </div>
     );
   }
@@ -29,4 +50,6 @@ export default App;
 // constructor makes the variables declared in a class private to that class.
 
 // super() gives you access to the parent component's properties.
+
+// You HAVE to put your components into src. That's where it's looking.
 
