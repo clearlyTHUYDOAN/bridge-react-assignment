@@ -8,26 +8,30 @@ class App extends Component {
   constructor() {
     super();
       this.state = {
-        searchedMovies: []
+        movies: []
       }
   }
   componentDidMount() {
     $.get('http://www.omdbapi.com/?s=harry+potter&y=&plot=short&r=json&type=movie')
     .then(response => {
       // console.log(response["Search"]);
-      let responseArray = response["Search"];
-      console.log(responseArray);
-      this.setState = {
-        searchedMovies: responseArray
-      }
+      // let responseArray = response["Search"];
+      // console.log(responseArray);
+      this.setState ({
+        movies: response["Search"]
+      })
+      // console.log(this.state.movies);
     });
   }
 
   render() {
     return (
       <div className="App">
-        <List />
+        <h1>Main App Component</h1>
+
+        <List test={this.state.movies}/> 
         <ListItem />
+
       </div>
     );
   }
