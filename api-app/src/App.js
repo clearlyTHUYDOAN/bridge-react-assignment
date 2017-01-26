@@ -30,8 +30,10 @@ class App extends Component {
     console.log(event); // Can I grab value of the list item being clicked? I know you can for form input values.
     console.log(event.target); // Maybe...
     console.log(event.target.value); // Wait, but this gives me a number 0...not the text.
+    // So maybe you can't grab the text value of DOM elements?
+
     this.setState ({
-      movie: "test"
+      movie: "We have successfully linked the handleClick and setState."
     })
     // console.log(this.state.movie);
   }
