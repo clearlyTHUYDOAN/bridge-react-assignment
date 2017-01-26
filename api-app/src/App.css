@@ -1,7 +1,14 @@
 ul {
   list-style: none;
+  line-height: 200%;
 }
 
 .App {
   text-align: center;
+}
+
+li:hover {
+  cursor: pointer;
+  font-size: 2em;
+  color: red;
 }

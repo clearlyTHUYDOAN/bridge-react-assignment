@@ -7,7 +7,8 @@ class ListItem extends Component {
 
     return (
       <div className="List-Item">
-        <h2>The ListItem component is working.</h2>
+        <h2>The ListItem component seems to be working.</h2>
+        <p>You just clicked:</p>
         <h3>{this.props.testing}</h3>
       </div>
     );

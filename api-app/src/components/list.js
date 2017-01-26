@@ -8,7 +8,7 @@ class List extends Component {
 
     return (
       <div className="List">
-        <h2>The List component is working.</h2>
+        <h2>The List component seems to be working.</h2>
         <ul onClick={this.props.click}>
           {test.map((movie, index) => 
             <li key={index}> {movie.Title}</li>)}
