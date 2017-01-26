@@ -8,8 +8,10 @@ class App extends Component {
   constructor() {
     super();
       this.state = {
-        movies: []
+        movies: [],
+        movie: ""
       }
+      this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     $.get('http://www.omdbapi.com/?s=harry+potter&y=&plot=short&r=json&type=movie')
@@ -24,18 +26,21 @@ class App extends Component {
     });
   }
 
+  handleClick(event) {
+    console.log(event);
+    this.setState ({
+      movie: "test"
+    })
+    console.log(this.state.movie);
+  }
+  
   render() {
     return (
       <div className="App">
         <h1>Main App Component</h1>
-        <div className="Search-Form">
-          <input placeholder="Which movie?"></input>
-          <button type="button">Search</button>
-        </div>
 
-
-        <List test={this.state.movies}/> 
-        <ListItem />
+        <List click={this.handleClick} test={this.state.movies} /> 
+        <ListItem testing={this.state.movie} />
 
       </div>
     );
