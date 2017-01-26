@@ -2,4 +2,6 @@ ul {
   list-style: none;
 }
 
-
+.App {
+  text-align: center;
+}

@@ -28,6 +28,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Main App Component</h1>
+        <div className="Search-Form">
+          <input placeholder="Which movie?"></input>
+          <button type="button">Search</button>
+        </div>
+
 
         <List test={this.state.movies}/> 
         <ListItem />
