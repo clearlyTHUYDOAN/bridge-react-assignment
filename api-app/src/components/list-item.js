@@ -25,7 +25,7 @@ const ListItem = (props) =>
   (<div className="List-Item">
     <h2>The ListItem component seems to be working.</h2>
     <p>You just clicked:</p>
-    {/*in this case, 'testing' is recieving the entire move object, which would not be displayed in an H3, and in fact
+    {/*in this case, 'testing' is recieving the entire movie object, which would not be displayed in an H3, and in fact
     give you an error for trying, instead lets grab the title*/}
     <h3>{props.testing.Title}</h3>
   </div>);
